@@ -1,4 +1,4 @@
-FROM fedora
+FROM registry.access.redhat.com/rhel7/rhel-tools
 RUN yum update -y && yum install -y openssh-server openssh-clients jq origin-clients && yum clean all
 
 RUN echo "%wheel  ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers
